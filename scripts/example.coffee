@@ -105,10 +105,13 @@ module.exports = (robot) ->
      robot.brain.set 'totalSodas', 0
      res.reply 'zzzzz'
 
+##hearはタイムラインに返納する
     robot.hear /aaa/i, (msg) ->
         msg.send 'bbb_msg'
         return
-
+##respondはレスポンスに反応する
+##応答も発信者に対するreply
+##タイムラインに応答するsend
     #返信
     robot.respond /111/i, (msg) ->
         msg.reply '222_msg'
@@ -117,8 +120,23 @@ module.exports = (robot) ->
         res.send '555_res'
         return
     robot.respond /ddd/i, (res) ->
-        res.reply 'ddd_res'
-        return
+        #res.reply 'ddd_res'
+        #return
+
+        message = res.match[1]
+        return if message is ''
+     
+        res
+          .http('https://heroku-line-bot9999.mybluemix.net/.mybluemix.net/lineWebhook')
+          .headers('Content-Type': 'application/json')
+          .post(JSON.stringify({ text: message})) (err, response, body) ->
+            if err?
+              res.send 'err_100'
+            else
+              res.send 'err_200'
+              #data = JSON.parse(body);
+              #res.send data["top_class"]
+
 
 #    robot.respond /(.*)/i, (res) ->
 #        msg.reply '333_3'
