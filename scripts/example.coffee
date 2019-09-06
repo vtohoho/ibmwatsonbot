@@ -127,7 +127,7 @@ module.exports = (robot) ->
         return if message is ''
      
         res
-          .http('https://heroku-line-bot9999.mybluemix.net/.mybluemix.net/lineWebhook')
+          .http('https://heroku-line-bot9999.mybluemix.net/lineWebhook')
           .headers('Content-Type': 'application/json')
           .post(JSON.stringify({ text: message})) (err, response, body) ->
             if err?
