@@ -20,7 +20,5 @@
     "hubot-twitter": "^2.1.1"
   },
   "engines": {
-    "node": "~>0.10.x",
-    "npm": ">= 6.10"
   }
 }
