@@ -106,11 +106,14 @@ module.exports = (robot) ->
      res.reply 'zzzzz'
 
     robot.hear /aaa/i, (msg) ->
-        msg.send 'bbb'
+        msg.send 'bbb_b'
+        return
+    robot.respond /111/i, (msg) ->
+        msg.reply '222_2'
         return
     robot.respond /111/i, (res) ->
-        msg.reply '222'
+        res.send '555_2'
         return
 #    robot.respond /(.*)/i, (res) ->
-#        msg.reply '333'
+#        msg.reply '333_3'
 #        return
