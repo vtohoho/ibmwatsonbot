@@ -111,6 +111,6 @@ module.exports = (robot) ->
     robot.respond /111/i, (res) ->
         msg.reply '222'
         return
-    robot.respond /(.*)/i, (res) ->
-        msg.reply '333'
-        return
+#    robot.respond /(.*)/i, (res) ->
+#        msg.reply '333'
+#        return
