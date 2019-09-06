@@ -129,11 +129,11 @@ module.exports = (robot) ->
         res
           .http('https://heroku-line-bot9999.mybluemix.net/lineWebhook')
           .headers('Content-Type': 'application/json')
-          .post(JSON.stringify({ text: message})) (err, response, body) ->
+          .post(JSON.stringify({ payload: message})) (err, response, body) ->
             if err?
-              res.send 'err_100'
+              res.send 'エラー_100'
             else
-              res.send 'err_200'
+              res.send '正常_200'
               #data = JSON.parse(body);
               #res.send data["top_class"]
 
