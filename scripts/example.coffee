@@ -133,8 +133,7 @@ module.exports = (robot) ->
         res
           .http('https://heroku-line-bot9999.mybluemix.net/lineWebhook')
           .headers('Content-Type': 'application/text')
-          .body('testaaaa')
-          .post('testbbbb') (err, response, body) ->
+          .post('body=testbbbb') (err, response, body) ->
             if err?
               res.send '¥¨¥é¡¼_100'
             else
