@@ -111,7 +111,7 @@ module.exports = (robot) ->
     robot.respond /111/i, (msg) ->
         msg.reply '222_2'
         return
-    robot.respond /111/i, (res) ->
+    robot.respond /ccc/i, (res) ->
         res.send '555_2'
         return
 #    robot.respond /(.*)/i, (res) ->
