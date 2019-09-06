@@ -1,1 +1,1 @@
-web: bin/hubot -a twitter -n tohohop_test
+web: python main.py
