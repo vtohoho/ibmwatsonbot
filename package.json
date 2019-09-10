@@ -12,9 +12,6 @@
     "twitter-text":"~> 1.9.0"
   },
   "devDependencies": {
-    "mocha":"~> 1.20.1",
-    "nock": "~> 0.36.2",
-    "hubot": "~> 2.7.3"
   },
   "author": "hoo89 (hoo89@me.com)",
   "license": "MIT"
