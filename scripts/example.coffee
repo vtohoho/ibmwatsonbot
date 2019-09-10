@@ -108,6 +108,7 @@ module.exports = (robot) ->
     robot.hear /aaa/i, (msg) ->
         msg.send 'bbb'
         return
-    robot.respond /111/i, (msg) ->
-        msg.reply '222'
+    robot.hear /tohohop_test (.*)/i, (res) ->
+#        msg.reply '222'
+        res.send '返信テスト'
         return
