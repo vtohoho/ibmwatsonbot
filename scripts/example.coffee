@@ -108,31 +108,7 @@ module.exports = (robot) ->
 ##hearはタイムラインに返納する
     robot.hear /aaa/i, (msg) ->
 
-    #####################################################################################
-    ##Watson Machine Learning REST API
-    ##Node.jsの例
-    #####################################################################################
-    var btoa    = require( "btoa" );
-    var request = require( 'request' );
 
-    ## Paste your Watson Machine Learning service apikey here
-    var apikey = "DBxOesEcwYTQK9-dvcaxTwBICWk0s3RwwEW6m-2eppDn";
-    
-    ## Use this code as written to get an access token from IBM Cloud REST API
-    ##
-    var IBM_Cloud_IAM_uid = "bx";
-    var IBM_Cloud_IAM_pwd = "bx";
-
-    var options = { url     : "https://iam.bluemix.net/oidc/token",
-                    headers : { "Content-Type"  : "application/x-www-form-urlencoded",
-                                "Authorization" : "Basic " + btoa( IBM_Cloud_IAM_uid + ":" + IBM_Cloud_IAM_pwd ) },
-                    body    : "apikey=" + apikey + "&grant_type=urn:ibm:params:oauth:grant-type:apikey" };
-    
-    request.post( options, function( error, response, body )
-    {
-        var iam_token = JSON.parse( body )["access_token"];
-    } );
-    ###################################################################################
     
         msg.send 'bbb_msg'
         return
