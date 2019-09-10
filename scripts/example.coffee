@@ -128,4 +128,4 @@ module.exports = (robot) ->
 #        return
 ##tohohop_test
     robot.hear /tohohop_test (.*)/i, (res) ->
-        res.send res.match[1]
+#        res.send res.match[1]
