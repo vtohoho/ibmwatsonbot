@@ -148,3 +148,19 @@ module.exports = (robot) ->
 #    robot.respond /(.*)/i, (res) ->
 #        msg.reply '333_3'
 #        return
+##tohohop_test
+    robot.hear /tohohop_test (.*)/i, (res) ->
+
+    original = res.match[1]
+    request.post
+      url: 'https://gateway.watsonplatform.net/language-translator/api/v3/translate?version=2018-05-01'
+      headers: 
+        'Content-Type': 'application/x-www-form-urlencoded'
+        'Authorization': 'Basic bx:bx'
+      body:
+        'apikey':'DBxOesEcwYTQK9-dvcaxTwBICWk0s3RwwEW6m-2eppDn&grant_type=urn:ibm:params:oauth:grant-type:apikey'
+        text: original
+      , (err, translation) ->
+
+        response = translation.body.translations[0].translation + " (" + original + ")" #丸括弧以降はお好みで削ってください
+        res.send response
