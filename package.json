@@ -1,24 +1,21 @@
 {
-  "name": "tohohop_test",
-  "version": "0.0.0",
-  "private": true,
-  "author": "hi_hitoshi@hotmail.com",
-  "description": "A simple helpful robot for your Company",
-  "dependencies": {
-    "hubot": "^3.3.2",
-    "hubot-diagnostics": "^1.0.0",
-    "hubot-google-images": "^0.2.7",
-    "hubot-google-translate": "^0.2.1",
-    "hubot-help": "^1.0.1",
-    "hubot-heroku-keepalive": "^1.0.3",
-    "hubot-maps": "0.0.3",
-    "hubot-pugme": "^0.1.1",
-    "hubot-redis-brain": "^1.0.0",
-    "hubot-rules": "^1.0.0",
-    "hubot-scripts": "^2.17.2",
-    "hubot-shipit": "^0.2.1",
-    "hubot-twitter": "^2.1.1"
+  "name": "hubot-twitter-userstream",
+  "version": "0.0.3",
+  "description": "hubot-twitter-userstream is an adapter for Hubot that allows you to use the hubot with Twitter on user TL.",
+  "main": "src/twitter-userstream",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:hoo89/hubot-twitter-userstream.git"
   },
-  "engines": {
-  }
+  "dependencies": {
+    "twit": "~> 1.1.15",
+    "twitter-text":"~> 1.9.0"
+  },
+  "devDependencies": {
+    "mocha":"~> 1.20.1",
+    "nock": "~> 0.36.2",
+    "hubot": "~> 2.7.3"
+  },
+  "author": "hoo89 (hoo89@me.com)",
+  "license": "MIT"
 }
