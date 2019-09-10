@@ -112,3 +112,6 @@ module.exports = (robot) ->
 #        msg.reply '222'
 #        msg.send 'test_test'
 #        return
+    robot.hear /tohohop_test (.*)/i, (res) ->
+        res.reply 'res_test_201909101550'
+        return
