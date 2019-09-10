@@ -4,8 +4,6 @@
   "description": "hubot-twitter-userstream is an adapter for Hubot that allows you to use the hubot with Twitter on user TL.",
   "main": "src/twitter-userstream",
   "repository": {
-    "type": "git",
-    "url": "git@github.com:hoo89/hubot-twitter-userstream.git"
   },
   "dependencies": {
     "hubot": "^3.3.2",
@@ -20,9 +18,7 @@
     "hubot-rules": "^1.0.0",
     "hubot-scripts": "^2.17.2",
     "hubot-shipit": "^0.2.1",
-    "hubot-twitter": "^2.1.1",
-    "twit": "~> 1.1.15",
-    "twitter-text":"~> 1.9.0"
+    "hubot-twitter": "^2.1.1"
   },
   "devDependencies": {
   },
