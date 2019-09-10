@@ -122,32 +122,10 @@ module.exports = (robot) ->
     robot.respond /ccc/i, (res) ->
         res.send '555_res'
         return
-    robot.respond /ddd/i, (res) ->
-        #res.reply 'ddd_res'
-        #return
-
-        message = res.match[1]
-        return if message is ''
-     
-#       res
-#         .http('https://heroku-line-bot9999.mybluemix.net/lineWebhook')
-#         .headers('Content-Type': 'application/json')
-#         .post(JSON.stringify({ payload: message})) (err, response, body) ->
-        res
-          .http('https://heroku-line-bot9999.mybluemix.net/lineWebhook')
-          .headers('Content-Type': 'application/text')
-          .post('body=testbbbb') (err, response, body) ->
-            if err?
-              res.send 'エラー_100'
-            else
-              res.send '正常_200'
-              #data = JSON.parse(body);
-              #res.send data["top_class"]
-
 
 #    robot.respond /(.*)/i, (res) ->
 #        msg.reply '333_3'
 #        return
 ##tohohop_test
     robot.hear /tohohop_test (.*)/i, (res) ->
-        res.send 'ddd_'+date()
+        res.send res.match[1]
