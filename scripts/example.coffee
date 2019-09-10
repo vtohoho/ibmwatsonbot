@@ -116,16 +116,16 @@ module.exports = (robot) ->
 ##応答も発信者に対するreply
 ##タイムラインに応答するsend
     #返信
-    robot.respond /111/i, (msg) ->
-        msg.reply '222_msg'
-        return
-    robot.respond /ccc/i, (res) ->
-        res.send '555_res'
-        return
+#    robot.respond /111/i, (msg) ->
+#        msg.reply '222_msg'
+#        return
+#    robot.respond /ccc/i, (res) ->
+#        res.send '555_res'
+#        return
 
 #    robot.respond /(.*)/i, (res) ->
 #        msg.reply '333_3'
 #        return
 ##tohohop_test
-    robot.hear /tohohop_test (.*)/i, (res) ->
+#    robot.hear /tohohop_test (.*)/i, (res) ->
 #        res.send res.match[1]
