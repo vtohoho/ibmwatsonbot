@@ -20,10 +20,10 @@ assistant = AssistantV2(
 # Sessions
 #########################
 
-session = assistant.create_session("<YOUR ASSISTANT ID>").get_result()
+session = assistant.create_session("26df19fb-463a-4cec-b889-48411f29bd45").get_result()
 print(json.dumps(session, indent=2))
 
-assistant.delete_session("<YOUR ASSISTANT ID>", "<YOUR SESSION ID>").get_result()
+assistant.delete_session("26df19fb-463a-4cec-b889-48411f29bd45", "https://gateway-tok.watsonplatform.net/assistant/api/v2/assistants/26df19fb-463a-4cec-b889-48411f29bd45/sessions").get_result()
 
 #########################
 # Message
