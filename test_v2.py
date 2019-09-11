@@ -20,22 +20,22 @@ assistant = AssistantV2(
 # Sessions
 #########################
 
-session = assistant.create_session("26df19fb-463a-4cec-b889-48411f29bd45").get_result()
-print(json.dumps(session, indent=2))
+session = assistant.create_session("a932fb80-2658-4677-8bf2-48ecdf481b82").get_result()
+#print(json.dumps(session, indent=2))
 
-assistant.delete_session("26df19fb-463a-4cec-b889-48411f29bd45", "https://gateway-tok.watsonplatform.net/assistant/api/v2/assistants/26df19fb-463a-4cec-b889-48411f29bd45/sessions").get_result()
+#assistant.delete_session("<YOUR ASSISTANT ID>", "<YOUR SESSION ID>").get_result()
 
 #########################
 # Message
 #########################
 
-message = assistant.message(
-    "<YOUR ASSISTANT ID>",
-    "<YOUR SESSION ID>",
-    input={'text': 'What\'s the weather like?'},
-    context={
-        'metadata': {
-            'deployment': 'myDeployment'
-        }
-    }).get_result()
-print(json.dumps(message, indent=2))
+#message = assistant.message(
+#    "<YOUR ASSISTANT ID>",
+#    "<YOUR SESSION ID>",
+#    input={'text': 'What\'s the weather like?'},
+#    context={
+#        'metadata': {
+#            'deployment': 'myDeployment'
+#        }
+#    }).get_result()
+#print(json.dumps(message, indent=2))
