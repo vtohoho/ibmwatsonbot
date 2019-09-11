@@ -3,8 +3,8 @@ import ibm_watson
 
 assistant = ibm_watson.AssistantV1(
     version='2019-02-28',
-    iam_apikey='{apikey}',
-    url='{url}'
+    iam_apikey='DBxOesEcwYTQK9-dvcaxTwBICWk0s3RwwEW6m-2eppDn',
+    url='https://gateway.watsonplatform.net/assistant/api'
 )
 
 response = assistant.message(
