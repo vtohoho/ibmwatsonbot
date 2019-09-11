@@ -1,1 +1,1 @@
-web: bin/hubot -a twitter -n tohohop_test
+web: python assistant_v2.py
